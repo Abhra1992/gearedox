@@ -12,3 +12,34 @@
  *= require_self
  */
 @import 'base';
+body{
+	@include grid-column(12);
+	background: {
+		color: rgb(236, 236, 236);
+	}
+	font: {
+		family: 'Segoe UI', Helvetica, 'Liberation Sans', 'DejaVu Sans', Freesans, sans-serif;
+    size: 14px;
+	}
+}
+.site-nav-title{
+	font-family: Helvetica;
+}
+.top-bar-section{
+  a{
+    text-transform: uppercase;
+  }
+}
+.view{
+  min-height: 450px;
+}
+.footer-links{
+  @include grid-column(8, $offset: 2);
+  text-align: center;
+  ul{
+    @include grid-column(9, $collapse: true);
+  }
+  li{
+    @include grid-column(2.95, $collapse: true);
+  }
+}

@@ -969,10 +969,12 @@
 
 // Background color for the top bar
 // $topbar-bg: #111;
+$topbar-bg: rgb(0, 180, 200);
 
 // Height and margin
 // $topbar-height: 45px;
 // $topbar-margin-bottom: emCalc(30px);
+$topbar-margin-bottom: emCalc(0px);
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
@@ -988,6 +990,7 @@
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
+$topbar-dropdown-bg: rgb(0, 230, 250);
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;

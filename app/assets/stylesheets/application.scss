@@ -34,12 +34,5 @@ body{
   min-height: 450px;
 }
 .footer-links{
-  @include grid-column(8, $offset: 2);
   text-align: center;
-  ul{
-    @include grid-column(9, $collapse: true);
-  }
-  li{
-    @include grid-column(2.95, $collapse: true);
-  }
 }

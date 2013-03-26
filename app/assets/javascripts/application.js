@@ -14,5 +14,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+(function($, window, undefined_) {
+  "use strict";
 
-$(document).foundation();
+  var $doc, Modernizr;
+  $doc = $(document);
+  Modernizr = window.Modernizr;
+  $(document).ready(function() {
+    return $(document).foundation();
+  });
+  if (Modernizr.touch && !window.location.hash) {
+    return $(window).load(function() {
+      return setTimeout((function() {
+        return window.scrollTo(0, 1);
+      }), 0);
+    });
+  }
+})(jQuery, this);

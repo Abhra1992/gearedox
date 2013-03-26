@@ -10,9 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require vendor/custom.modernizr
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
 
 $(document).foundation();

@@ -23,5 +23,37 @@
       <li><%= link_to 'Blog', root_path %></li>
       <li class="divider hide-for-small"></li>
     </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider show-for-medium-and-up"></li>
+      <% if user_signed_in? %>
+      <li class="has-dropdown">
+        <a href="#"><%= current_user.username %></a>
+        <ul class="dropdown">
+          <li><label>Account</label></li>
+          <li><%= link_to 'Account Settings', '#' %></li>
+          <li><%= link_to 'Subscriptions', '#' %></li>
+          <li class="divider"></li>
+          
+          <li><label>Session</label></li>
+          <li><%= link_to 'Logout', '#' %></li>
+        </ul>
+      </li>
+      <% else %>
+      <li class="has-dropdown">
+        <a href="#">Join</a>
+        <ul class="dropdown">
+          <li><label>Session</label></li>
+          <li><%= link_to 'Sign In', '#' %></li>
+          <li><%= link_to 'Sign Up', '#' %></li>
+          <li class="divider"></li>
+          
+          <li><label>Feedback</label></li>
+          <li><%= link_to 'Write to us', '#' %></li>
+        </ul>
+      </li>
+      <% end %>
+    </ul>
   </section>
 </nav>

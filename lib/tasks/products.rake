@@ -21,5 +21,17 @@ namespace :db do
         end
       end
     end
+
+    # Create Reviews for the products #
+    Product.all.each do |p|
+      rand(5).times do
+        p.reviews.new do |r|
+          r.user_id = 1 + rand(User.count)
+          r.body = Faker::Lorem.paragraph
+          r.save
+        end
+      end
+    end
+    # The End #
   end
 end

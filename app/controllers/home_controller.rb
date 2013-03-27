@@ -3,4 +3,8 @@ class HomeController < ApplicationController
   
   def index
   end
+
+  def account
+    @account = current_user.account
+  end
 end

@@ -13,7 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/var/cache
+/vendor/cache
 
 # Ignore application configuration
 /config/application.yml
+/dotcloud.yml

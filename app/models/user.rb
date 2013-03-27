@@ -9,5 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :firstname, :lastname, :phone, :username
   
+  has_one :account
+  belongs_to :country
+  belongs_to :experience
   has_many :products
 end

@@ -7,10 +7,12 @@ class CreateAccounts < ActiveRecord::Migration
       t.date :birthdate
       t.references :experience
       t.references :country
+      t.references :user
 
       t.timestamps
     end
     add_index :accounts, :experience_id
     add_index :accounts, :country_id
+    add_index :accounts, :user_id
   end
 end

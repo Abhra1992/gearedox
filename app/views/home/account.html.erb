@@ -1,0 +1,10 @@
+<div class="view">
+  <section class="account">
+    <aside class="display-photo">
+      <%= image_tag @account.photo, :class => 'display-pic' %>
+    </aside>
+    <div class="account-details">
+      <%= @account.to_yaml %>
+    </div>
+  </section>
+</div>

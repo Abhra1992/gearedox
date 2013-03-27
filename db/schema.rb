@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326193030) do
+ActiveRecord::Schema.define(:version => 20130327042953) do
+
+  create_table "accounts", :force => true do |t|
+    t.text     "address"
+    t.text     "bio"
+    t.string   "photo"
+    t.date     "birthdate"
+    t.integer  "experience_id"
+    t.integer  "country_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "accounts", ["country_id"], :name => "index_accounts_on_country_id"
+  add_index "accounts", ["experience_id"], :name => "index_accounts_on_experience_id"
+  add_index "accounts", ["user_id"], :name => "index_accounts_on_user_id"
+
+  create_table "countries", :force => true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "experiences", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "file_types", :force => true do |t|
     t.string   "mime"

@@ -10,7 +10,18 @@ class User < ActiveRecord::Base
   attr_accessible :firstname, :lastname, :phone, :username
   
   has_one :account
-  belongs_to :country
-  belongs_to :experience
+  has_one :country, :through => :account
+  has_one :experience, :through => :account
   has_many :products
+  has_many :reviews
+  has_many :posts
+  has_many :comments
+
+  def Country
+    country.name
+  end
+
+  def Experience
+    experience.name
+  end
 end

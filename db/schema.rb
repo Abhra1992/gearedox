@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326191319) do
+ActiveRecord::Schema.define(:version => 20130326193030) do
+
+  create_table "file_types", :force => true do |t|
+    t.string   "mime"
+    t.string   "extension"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "screenshot"
+    t.string   "attachment"
+    t.integer  "checkouts"
+    t.integer  "file_type_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "products", ["file_type_id"], :name => "index_products_on_file_type_id"
+  add_index "products", ["user_id"], :name => "index_products_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "firstname"

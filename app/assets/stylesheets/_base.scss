@@ -2,3 +2,11 @@
 @import 'foundation/foundation-global';
 @import 'foundation/components/grid';
 @import 'foundation/components/block-grid';
+@import 'foundation/components/buttons';
+@import 'foundation/components/panels';
+
+@mixin trans-panel() {
+  @include panel($bg: rgba(0, 0, 0, 0.9), $padding: emCalc(10px));
+  //background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}

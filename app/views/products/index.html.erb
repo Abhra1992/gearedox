@@ -1,0 +1,19 @@
+<div class="view">
+  <section class="products">
+    <aside class="categories">
+      <%= link_to 'CAD Models', '#' %>
+      <%= link_to 'Meshed Models', '#' %>
+      <%= link_to 'Upload', '#' %>
+    </aside>
+    <div class="products-list">
+      <ul class="products-block">
+      <% @products.each do |p| %>
+      <li class="product">
+        <%= link_to p.name, p %><br/>
+        <%= pluralize p.checkouts, 'Download' %>
+      </li>
+      <% end %>
+      </ul>
+    </div>
+  </section>
+</div>
